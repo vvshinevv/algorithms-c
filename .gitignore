@@ -1,0 +1,16 @@
+Debug
+.vs
+*.opensdf
+*.sdf
+*.sln
+NTS
+BackJunJudge/Debug
+BackJunJudge/*.vcxproj
+BackJunJudge/*.filters
+DataStructure/Debug
+DataStructure/*.vcxproj
+DataStructure/*.filters
+ProgrammingInsight/Debug
+ProgrammingInsight/*.vcxproj
+ProgrammingInsight/*.filters
+
