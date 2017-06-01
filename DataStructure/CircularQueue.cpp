@@ -1,4 +1,3 @@
-#if 0
 #include <iostream>
 #include "CircularQueue.h"
 
@@ -40,4 +39,3 @@ Data PeekQueue(Queue * que) {
 	}
 	return que->queArr[NextPosIdx(que->front)];
 }
-#endif
