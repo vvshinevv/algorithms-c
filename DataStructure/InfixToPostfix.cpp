@@ -3,9 +3,8 @@
 #include <stack>
 #include "InfixToPostfix.h"
 using namespace std;
-
 int GetOpPrec(char op) {
-	switch(op) {
+	switch (op) {
 	case '*': case '/':
 		return 5;
 	case '+': case '-':
@@ -29,7 +28,7 @@ void InfixToPostfix(char exp[]) {
 	stack<char> stack;
 	int expLen = strlen(exp) + 1;
 	char * convExp = (char *)malloc(sizeof(char) * expLen);
-	memset(convExp, 0, expLen);
+	memset(convExp, 0, expLen); 
 	int idx = 0;
 	char tok;
 	for (int i = 0; i < expLen; i++) {
@@ -44,8 +43,7 @@ void InfixToPostfix(char exp[]) {
 			case ')':
 				while (1) {
 					if (stack.top() == '(') {
-						stack.pop();
-						break;
+						stack.pop(); break;
 					}
 					convExp[idx++] = stack.top();
 					stack.pop();
@@ -54,7 +52,7 @@ void InfixToPostfix(char exp[]) {
 			case '*': case '/':
 			case '+': case '-':
 				while (!stack.empty() && WhoIsPrec(stack.top(), tok) >= 0) {
-					convExp[idx++] = stack.top();
+					convExp[i++] = stack.top();
 					stack.pop();
 				}
 				stack.push(tok);

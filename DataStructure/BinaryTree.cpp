@@ -33,3 +33,28 @@ void MakeRightSubTree(BTreeNode * main, BTreeNode * sub) {
 
 	main->right = sub;
 }
+
+void PreOrderTraverse(BTreeNode * root, VisitFuncPtr action) {
+	if (root == NULL)
+		return;
+
+	action(root->data);
+	PreOrderTraverse(root->left, action);
+	PreOrderTraverse(root->right, action);
+}
+void InOrderTraverse(BTreeNode * root, VisitFuncPtr action) {
+	if (root == NULL)
+		return;
+
+	InOrderTraverse(root->left, action);
+	action(root->data);
+	InOrderTraverse(root->right, action);
+}
+void PostOrderTravese(BTreeNode * root, VisitFuncPtr action) {
+	if (root == NULL)
+		return;
+
+	PostOrderTravese(root->left, action);
+	PostOrderTravese(root->right, action);
+	action(root->data);
+}

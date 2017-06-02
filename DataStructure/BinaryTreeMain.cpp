@@ -3,7 +3,9 @@
 #include "BinaryTree.h"
 
 using namespace std;
-
+void PrintData(BTData data) {
+	cout << data << " ";
+}
 int main(void) {
 	BTreeNode * bt1 = MakeBTreeNode();
 	BTreeNode * bt2 = MakeBTreeNode();
@@ -17,8 +19,11 @@ int main(void) {
 	MakeRightSubTree(bt1, bt3);
 	MakeLeftSubTree(bt2, bt4);
 
-	cout << GetData(GetLeftSubTree(bt1)) << endl;
-	cout << GetData(GetLeftSubTree(GetLeftSubTree(bt1))) << endl;
+	PreOrderTraverse(bt1, PrintData); cout << endl;
+	InOrderTraverse(bt1, PrintData); cout << endl;
+	PostOrderTravese(bt1, PrintData); cout << endl;
+
+
 	return 0;
 }
 #endif
