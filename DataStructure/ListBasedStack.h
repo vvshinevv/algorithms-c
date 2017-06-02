@@ -1,7 +1,7 @@
 #ifndef __LIST_BASED_STACK_H__
 #define __LIST_BASED_STACK_H__
 
-typedef int lbSData;
+typedef char lbSData;
 
 typedef struct _listBasedStackNode {
 	lbSData data;

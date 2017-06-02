@@ -32,6 +32,9 @@ int main(void) {
 	cout << endl;
 	cout << lLSize(&lL) << endl;
 
+	lLInsert(&lL, 6);
+	lLPrint(&lL);
+
 
 	return 0;
 }
