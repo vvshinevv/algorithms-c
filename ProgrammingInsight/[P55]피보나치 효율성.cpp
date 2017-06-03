@@ -44,7 +44,7 @@ long long Fibo4(int n) {
 }
 
 int main(void) {
-	cout << Fibo4(9);
+	cout << Fibo1(5);
 	return 0;
 }
 #endif
