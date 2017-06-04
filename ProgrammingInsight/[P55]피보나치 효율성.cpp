@@ -41,6 +41,7 @@ long long Fibo4(int n) {
 	if (memo[n] > 0) return memo[n];
 	if (n == 1 || n == 2) return memo[n] = 1;
 	else return memo[n] = Fibo4(n - 1) + Fibo4(n - 2);
+
 }
 
 int main(void) {
