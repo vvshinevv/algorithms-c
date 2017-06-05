@@ -16,9 +16,9 @@ int GetOpPrec(char op) {
 }
 
 int WhoIsPrec(char op1, char op2) {
-	if (op1 > op2)
+	if (GetOpPrec(op1) > GetOpPrec(op2))
 		return 1;
-	else if (op1 < op2)
+	else if (GetOpPrec(op1) < GetOpPrec(op2))
 		return -1;
 	else
 		return 0;
