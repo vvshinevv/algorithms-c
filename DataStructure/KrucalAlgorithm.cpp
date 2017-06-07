@@ -26,7 +26,7 @@ typedef struct _dIsJointSet {
 
 typedef struct _cOmp {
 	bool operator() (Edge edge1, Edge edge2) {
-		return edge1.weight > edge2.weight;
+		return edge1.weight > edge2.weight;  // > : min-heap  <: max-heap
 		// 참 : edge2의 우선순위가 높다.(=edge2의 값이 더 낮다)
 		// 거짓: edge1의 우선순위가 높다.(=edge1의 값이 더 낮다)
 	}
@@ -107,8 +107,6 @@ void Kruscal(Graph * graph) {
 		pQ.pop();
 	}
 }
-
-
 
 int main(void) {
 	Graph * graph = CreateGraph();
