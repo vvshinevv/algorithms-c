@@ -135,7 +135,7 @@ void DijkstraAlgorith(Graph * graph) {
 			cur = cur->next;
 		}
 	}
-
+	cout << startVertex << "에서 " << endVertex << "까지 최단거리: " << distance.find(endVertex)->second << endl;
 	ShowPath(path, endVertex);
 }
 
