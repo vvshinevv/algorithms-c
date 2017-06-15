@@ -5,7 +5,7 @@
 
 using namespace std; 
 int main(void) {
-	char exp[] = "((1-2)+3)/(5-2)";
+	char exp[] = "((11-2)+3)";
 	InfixToPostfix(exp);
 	cout << PostCalculator(exp) << endl;;
 
