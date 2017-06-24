@@ -130,9 +130,7 @@ void DijkstraAlgorithm(Graph * graph) {
 	}
 	ShowPath(path, distance, sVertex, eVertex);
 }
-void fuc(string aA) {
-	cout << aA;
-}
+
 int main(void) {
 	Graph * graph = MakeGraph();
 	DijkstraAlgorithm(graph);

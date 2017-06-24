@@ -30,7 +30,7 @@ void DepthFirstSearch(vector<int> graph[], bool visitArr[], int fir, int cnt) {
 				VisitVertex(visitArr, visit);
 			}
 		}
-
+		
 		if (visitFlag == false) {
 			stack.pop();
 			if (!stack.empty())

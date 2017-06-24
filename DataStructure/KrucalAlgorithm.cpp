@@ -85,7 +85,7 @@ Graph * CreateGraph() {
 	dJs = (DisJointSet **)malloc(sizeof(DisJointSet*) * (graph->vertexCnt));
 	for (int i = 0; i < graph->vertexCnt; i++) {
 		dJs[i] = (DisJointSet *)malloc(sizeof(DisJointSet));
-		dJs[i] = MakeDisJointSet((char)i + 'A');
+		dJs[i] = MakeDisJointSet((char)i + 'A')
 	}
 
 	for (int i = 0; i < graph->edgeCnt; i++) {
