@@ -11,8 +11,6 @@ typedef struct _cOmp {
 
 void KFirstSort(int * arr, int k, int arrLen) {
 
-	cout << arrLen << endl;
-
 	priority_queue<int, vector<int>, Comp> setL;
 	int * sortLen = (int *)malloc(sizeof(int)*(arrLen + 1));
 
